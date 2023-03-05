@@ -26,9 +26,7 @@ public class Main {
 
     private static void calcularSequencia(int[] fibonacciArray) {
         for (int i = 0; i < ((fibonacciArray.length)-2); i++) { // O contador termina no tamanho -2 por já ser suficiente para determinar a sequência completa, evitando erros.
-            int a = fibonacciArray[i]; // Pega o caractere na posição do contador;
-            int b = fibonacciArray[i+1]; // Pega o caractere na posição seguinte do contador;
-            fibonacciArray[i+2] = a+b; // Soma e resultado na posição 2 números a frente do contador.
+            fibonacciArray[i+2] = fibonacciArray[i]+fibonacciArray[i+1]; // Soma e resultado na posição 2 números a frente do contador.
         }
     }
 }
